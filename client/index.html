@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- to link to the css file  -->
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'purchase')">
+        purchase
+      </button>
+      <button class="tablinks" onclick="openCity(event, 'sales')">sales</button>
+      <button class="tablinks" onclick="openCity(event, 'client')">
+        client
+      </button>
+      <button class="tablinks" onclick="openCity(event, 'item')">item</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="purchase" class="tabcontent">
+      <h3>purchase</h3>
+      <form id="itemForm">
+        <div class="form-group">
+          <label for="itemCode">Item Code:</label>
+          <input type="text" id="itemCode" name="itemCode" required />
+        </div>
+        <div class="form-group">
+          <label for="itemName">Item Name:</label>
+          <input type="text" id="itemName" name="itemName" required />
+        </div>
+        <div class="form-group">
+          <label for="itemQuantity">Item Quantity:</label>
+          <input type="number" id="itemQuantity" name="itemQuantity" required />
+        </div>
+        <div class="form-group">
+          <label for="grnNumber">GRN Number:</label>
+          <input type="text" id="grnNumber" name="grnNumber" required />
+        </div>
+        <div class="form-group">
+          <label for="grnDate">GRN Date:</label>
+          <input type="date" id="grnDate" name="grnDate" required />
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+    <!-- billing page  -->
+    <div id="sales" class="tabcontent">
+      <h3>sales</h3>
+      <form id="billingForm">
+        <div class="form-group">
+          <label for="itemCode">Item Code:</label>
+          <input type="text" id="itemCode" name="itemCode" required />
+        </div>
+        <div class="form-group">
+          <label for="itemName">Item Name:</label>
+          <input type="text" id="itemName" name="itemName" required />
+        </div>
+        <div class="form-group">
+          <label for="itemCategory">Item Category:</label>
+          <select id="itemCategory" name="itemCategory">
+            <option value="category1">Category 1</option>
+            <option value="category2">Category 2</option>
+            <option value="category3">Category 3</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="price">Price:</label>
+          <input type="number" id="price" name="price" required />
+        </div>
+        <div class="form-group">
+          <label for="unit">Unit:</label>
+          <input type="text" id="unit" name="unit" required />
+        </div>
+        <div class="form-group">
+          <label for="tax">Tax:</label>
+          <input type="number" id="tax" name="tax" required />
+        </div>
+        <div class="form-group">
+          <label for="totalPrice">Total Price:</label>
+          <input
+            type="number"
+            id="totalPrice"
+            name="totalPrice"
+            required
+            readonly
+          />
+        </div>
+        <div class="buttons">
+          <button type="submit" id="savePrintBtn">Save and Print</button>
+          <button type="submit" id="savePdfBtn">Save and Create PDF</button>
+          <button type="submit" id="saveBtn">Save</button>
+        </div>
+      </form>
+    </div>
+    <!-- cl -->
+    <div id="client" class="tabcontent">
+      <h3>client</h3>
+      <form id="clientForm">
+        <div class="form-group">
+          <label for="clientCode">Client Code:</label>
+          <input type="text" id="clientCode" name="clientCode" required />
+        </div>
+        <div class="form-group">
+          <label for="clientName">Client Name:</label>
+          <input type="text" id="clientName" name="clientName" required />
+        </div>
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" required />
+        </div>
+        <div class="form-group">
+          <label for="pincode">Pincode:</label>
+          <input type="number" id="pincode" name="pincode" required />
+        </div>
+        <div class="form-group">
+          <label for="contactInfo">Contact Info:</label>
+          <input type="text" id="contactInfo" name="contactInfo" required />
+        </div>
+        <div class="form-group">
+          <label for="gstNumber">GST Number:</label>
+          <input type="text" id="gstNumber" name="gstNumber" required />
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+
+    <div id="item" class="tabcontent">
+      <h3>item</h3>
+      <form id="productForm">
+        <div class="form-group">
+          <label for="productCode">Product Code:</label>
+          <input type="text" id="productCode" name="productCode" required />
+        </div>
+        <div class="form-group">
+          <label for="productName">Product Name:</label>
+          <input type="text" id="productName" name="productName" required />
+        </div>
+        <div class="form-group">
+          <label for="price">Price:</label>
+          <input
+            type="number"
+            id="price"
+            name="price"
+            min="0"
+            step="0.01"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="category">Category:</label>
+          <input type="text" id="category" name="category" required />
+        </div>
+        <div class="form-group">
+          <label for="unit">Unit:</label>
+          <input type="text" id="unit" name="unit" required />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
